@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #FFFFE0;
+
+    background: -webkit-linear-gradient(-319deg, #1db9ed,#a2dffb,#f93ec7);                                                                            
+}
+
+p {
+    width: fit-content;
+}
+
+.main-field_entryBtn {
+    font-weight: 300;
+    color: inherit;
+    font-size: 14px;
+    padding: 4px 5px;
+    border: none;
+    border-radius: 20px;
+    
+    background-color: #F93EC7;
+    transition: all 250ms ease-in-out;
+}
+
+.main-field_entryBtn:hover {
+    background-color: #ff5ad3;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.main-field_entryBtn:active {
+    transform:scale(0.95);
+}
+
+.button {
+    font-weight: 300;
+    font-size: 14px;
+    color: inherit;
+    position: absolute;
+    left: 40%;
+    padding: 4px 5px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    text-align: center;
+    
+    background-color: #F93EC7;
+    transition: all 250ms ease-in-out;
+}
+
+.button:hover {
+    background-color: #ff5ad3;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.button:active {
+    transform:scale(0.95);
+}
+
+.main-field_entryField {
+    padding: 4px 5px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    transition: all 250ms ease-in-out;
+}
+
+.main-field_entryField:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.main {
+    position: relative;
+    width: 700px;
+    background-color: rgb(132, 136, 132, 0.4);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.main-header {
+    font-weight: 700;
+    text-align: center;
+}
+
+.main-desc {
+    max-width: 500px;
+    text-align: justify;
+    margin: 25px auto;
+}
+
+.main-field {
+    text-align: center;
+}
+
+.main-result_wrapper {
+    position: absolute;
+    margin-top: 50px;
+    padding: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 20px;
+
+    background-color: rgb(132, 136, 132, 0.4);
+    
+}
