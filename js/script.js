@@ -5,13 +5,20 @@ let entry = document.querySelector('.main-field_entryBtn');
 
 let afterMain = document.querySelector('.main');
 let resultDiv = document.createElement('div');
-resultDiv.classList.add('main-result_wrapper')
+resultDiv.classList.add('main-result_wrapper');
+let userTries = document.createElement('p');
 let result = document.createElement('p');
 let answer = document.createElement('p');
 let lowOrHi = document.createElement('p');
 
 let tries = 1;
+howManyTries = 10;
 let resetButton;
+
+afterMain.appendChild(resultDiv);
+resultDiv.appendChild(userTries);
+
+userTries.textContent = 'У Вас осталось 10 попыток';
 
 function guessTheNumber() {
 
@@ -22,6 +29,18 @@ function guessTheNumber() {
     resultDiv.appendChild(result);
     resultDiv.appendChild(answer);
     resultDiv.appendChild(lowOrHi);
+
+    --howManyTries;
+
+    if (howManyTries < 5 && howManyTries > 1) {
+        userTries.textContent = `У Вас осталось ${howManyTries} попытки`;
+    } else {
+        if (howManyTries === 1) {
+            userTries.textContent = `У Вас осталось ${howManyTries} попытка`;
+        } else {
+            userTries.textContent = `У Вас осталось ${howManyTries} попыток`;
+        }
+    }
 
     if (tries === 1) {
         result.textContent = 'Ваши попытки: ';
@@ -74,12 +93,15 @@ function gameOver() {
 function clearFields() {
     
     tries = 1;
+    howManyTries = 10;
     
     entryField.disabled = false;
     entry.disabled = false;
     
     resultDiv.removeChild(resetButton);
-    afterMain.removeChild(resultDiv);
+    userTries.textContent = 'У Вас осталось 10 попыток';
+    answer.textContent = '';
+    result.textContent = '';
 
     randNum = Math.floor(Math.random() * 100);
     entryField.value = '';
